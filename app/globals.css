@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7f8fc; --surface: #ffffff; --surface-2: #f1f3fa; --border: #e4e7f1;
+  --fg: #0c0e1a; --muted: #5b6079; --brand: #0d9488; --brand-2: #0ea5e9; --brand-soft: #d9f5f0;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #07090d; --surface: #11141c; --surface-2: #171b24; --border: #212735;
+  --fg: #eceef7; --muted: #8e93ad; --brand: #2dd4bf; --brand-2: #38bdf8; --brand-soft: #0c2a27;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.font-display { font-family: "Space Grotesk", Inter, sans-serif; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; }
+.btn { height: 2.85rem; padding: 0 1.4rem; border-radius: 0.75rem; font-weight: 600; font-size: 0.92rem; border: 1px solid var(--border); background: var(--surface); cursor: pointer; color: var(--fg); display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.btn:hover { background: var(--surface-2); }
+.btn-brand { background: var(--brand); color: #04201c; border-color: transparent; }
+.btn-brand:hover { opacity: 0.92; background: var(--brand); }
+.block-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.pill { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand); }
